@@ -279,6 +279,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    background-attachment: fixed;
+
 }
 
 /* Place text in the middle of the image */
