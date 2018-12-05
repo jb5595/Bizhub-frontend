@@ -12,7 +12,7 @@ class ContactInfo extends React.Component{
       </div>:null}
       <h5 className = "profile-section-header" >Connect</h5>
       <div className = "contact-info-container row">
-          <div className = "col-5 offset-2">
+          <div className = "col-7 offset-1">
             <div className = "contact-header">
               Website
             </div>

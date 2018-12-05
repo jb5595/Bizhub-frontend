@@ -9,7 +9,7 @@ class Reviews extends React.Component{
       <div>
         <div className = "analytics">
         <h4>Your Reviews</h4>
-          <div className = "profile_views ">
+          <div className = "profile_views dashboard-container ">
 
             <div className = "dashboard-question-preview">
               <ExpertProfileReviews history = {this.props.history}

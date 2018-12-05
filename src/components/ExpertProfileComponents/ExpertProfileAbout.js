@@ -7,7 +7,7 @@ class ExpertProfileAbout extends React.Component{
   render(){
     return(
       <div className = "profile-subinfo">
-          <h5 className = "offset-2 col-8">Work Experience
+          <h5 className = "">Work Experience
             {this.props.canEdit ? <span onClick = {this.props.addWorkExperience}
             className = "add-work-experience-button">
                 <FaPlusSquare/>
@@ -15,7 +15,7 @@ class ExpertProfileAbout extends React.Component{
           <div className= "work-experience-container">
             {this.props.workExperience ? this.renderWorkExperience() :  <GridLoader sizeUnit={"px"} size={50} color={'#123abc'} loading={this.props.workExperience}/>}
           </div>
-          <h5 className = "offset-2 col-8">Education
+          <h5 className = "">Education
            {this.props.canEdit ? <span onClick = {this.props.addEducation}
            className = "add-work-experience-button">
             <FaPlusSquare/></span> :null}</h5>
@@ -29,7 +29,7 @@ class ExpertProfileAbout extends React.Component{
     renderWorkExperience(){
       return this.props.workExperience.map(job =>{
       return(
-        <div key={job.id} className = "offset-2 col-8">
+        <div key={job.id} className = "resume-item">
           {this.props.canEdit ?  <div  className = "work-experiences-buttons">
               <span className = "edit-work-experiences-button" data-id ={job.id} onClick = {this.handleEditWorkExperience}>
                 <FaEdit/>
@@ -58,7 +58,7 @@ class ExpertProfileAbout extends React.Component{
     renderEducation(){
       return this.props.educations.map(education => {
         return(
-          <div key={education.id} className = "offset-2 col-8">
+          <div key={education.id} className = "resume-item">
               {this.props.canEdit ?  <div  className = "work-experiences-buttons">
                   <span className = "edit-work-experiences-button" data-id ={education.id} onClick = {this.handleEditEducation}>
                     <FaEdit/>

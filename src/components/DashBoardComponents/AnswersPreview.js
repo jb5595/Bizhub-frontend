@@ -26,12 +26,16 @@ class AnswersPreview extends React.Component{
   render(){
     return(
       <div>
+
         <div className = "analytics">
         <h4>Your Answers</h4>
           <div className = "profile_views ">
             <p>Get more profile views by answering questions.</p>
             <br/>
+            <div className = "dashboard-container additional-container-padding">
             <div className = "row offset-1">
+            <br/><br/>
+
               <div className = "analytics-header">
                 <div>
                   <b>Total Answers</b>
@@ -55,10 +59,14 @@ class AnswersPreview extends React.Component{
                   <b>Answers Last Month</b>
                 </div>
                 <div>
-                {this.props.answers_overview.answers_last_month}
+                  {this.props.answers_overview.answers_last_month}
                 </div>
               </div>
             </div>
+            <br/><br/>
+
+            </div>
+
             <div className = "dashboard-question-preview">
             <QuestionDisplayContainer history = {this.props.history} questions ={this.props.questions}/>
             <div onClick ={this.props.handleClick} className = "view-all-answers-button">
@@ -73,5 +81,4 @@ class AnswersPreview extends React.Component{
   }
 
 }
-
 export default AnswersPreview

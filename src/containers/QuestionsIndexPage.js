@@ -70,18 +70,25 @@ class QuestionIndexPage extends React.Component{
   render(){
 
     return(
-      <div className = "questions-index-page-container col-8 offset-2">
-        <br/><br/>
-        <QuestionIndexFilters handleFilterButtonClick = {this.handleFilterButtonClick}
-        handleSubmit={this.filterSearchResults} handleChange = {this.handleFilterTextChange}
-        filterText = {this.state.filterText}/>
-        {this.state.displayQuestions.length === 0 ?
-          <div><br/><br/>There Doesn't Appear to Be Anything Here. Try a different search term or
-           <Link to = "/post/question"> posting a question of your own </Link></div>  :
-           <QuestionDisplayContainer
-          history = {this.props.history}
-           questions = {this.state.displayQuestions}/>
-          }
+      <div className = "questions-index-page-container ">
+        <div className = "dashboard-container search-bar-additional-padding">
+          <br/><br/>
+
+          <QuestionIndexFilters handleFilterButtonClick = {this.handleFilterButtonClick}
+          handleSubmit={this.filterSearchResults} handleChange = {this.handleFilterTextChange}
+          filterText = {this.state.filterText}/>
+          <br/><br/>
+
+        </div>
+        <div className = "col-8 offset-2">
+          {this.state.displayQuestions.length === 0 ?
+            <div><br/><br/>There Doesn't Appear to Be Anything Here. Try a different search term or
+             <Link to = "/post/question"> posting a question of your own </Link></div>  :
+             <QuestionDisplayContainer
+            history = {this.props.history}
+             questions = {this.state.displayQuestions}/>
+            }
+        </div>
       </div>
     )
   }

@@ -14,7 +14,7 @@ class Analytics extends React.Component{
       <div>
         <div className = "analytics">
         <h4>Analytics</h4>
-          <div className = "profile_views ">
+          <div className = "profile_views dashboard-container ">
             <h5>
               Profile Views
             </h5>
@@ -48,7 +48,7 @@ class Analytics extends React.Component{
               </div>
             </div>
           </div>
-          <div className = "profile_views ">
+          <div className = "profile_views dashboard-container ">
             <h5>
               Website Clicks
             </h5>

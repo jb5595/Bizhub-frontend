@@ -41,7 +41,12 @@ class PostQuestionPage extends React.Component{
   render(){
     return(
       <div>
-        <div className = "form-container col-6 offset-3">
+      <br/><br/>
+      <br/><br/>
+
+        <div className = "form-container col-6 offset-3 dashboard-container">
+          <br/>
+
           <div className="form-group">
             <label htmlFor="question"><b>Title</b></label>
             <input onChange ={this.handleChange} type="text"  maxLength = "150" className="form-control" name = "question" placeholder="Be as clear and concise as possible"/>
@@ -56,6 +61,7 @@ class PostQuestionPage extends React.Component{
           <TagForm tags = {this.state.question.tags} addTag = {this.addTag} removeTag = {this.removeTag}/>
           <br/>
           <button onClick ={this.postQuestion} className = "btn btn-primary">Post Your Question</button>
+          <br/><br/>
         </div>
       </div>
     )
@@ -83,7 +89,7 @@ class PostQuestionPage extends React.Component{
     }
 ).then(resp => resp.json())
 .then(data => {
-  
+
   this.props.history.push(`/questions/${data.id}`)})
   }
 }

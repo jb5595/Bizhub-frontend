@@ -29,7 +29,8 @@ class CreateExpertAccountPage extends React.Component{
        }
         <div>
           <br/><br/>
-          <form onSubmit = {this.handleSubmit} className = "create-expert-form col-6 offset-3">
+          <form onSubmit = {this.handleSubmit} className = "create-expert-form dashboard-container col-6 offset-3">
+            <br/>
             <div className="form-group ">
               <label htmlFor="user_name">Username</label>
               <input onChange ={this.handleInputChange} type="text" className="form-control" name = "user_name" value = {this.state.expert.user_name} placeholder="Enter Username"/>
@@ -57,6 +58,7 @@ class CreateExpertAccountPage extends React.Component{
               </div>
             </div>
             <button className = "btn btn-primary">Create Account</button>
+            <br/><br/><br/>
           </form>
         </div>
     </div>

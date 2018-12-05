@@ -27,8 +27,10 @@ class CreateUserPage extends React.Component{
          <div className="alert alert-danger" role="alert">Unable to Create User, Please Try Again</div>
          : null
        }
-        <div className = "form-container">
-        <form onSubmit = {this.handleSubmit} className = "col-6 offset-3">
+        <div className = "form-container ">
+        <form onSubmit = {this.handleSubmit} className = "col-6 offset-3 dashboard-container">
+          <br/><br/>
+
           <div className="form-group">
             <label htmlFor="email">Email address</label>
             <input value = {this.state.email} onChange = {this.handleChange} type="email" className="form-control" name = "email" placeholder="Enter email"/>
@@ -66,6 +68,7 @@ class CreateUserPage extends React.Component{
             <small className="form-text text-muted">This will help ensure you are connnected with the right expert to answer your question</small>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
+          <br/><br/>
         </form>
       </div>
         Already a user? <Link to = "/login"> Sign In </Link>

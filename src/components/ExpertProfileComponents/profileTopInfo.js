@@ -11,7 +11,7 @@ class ProfileTopInfo extends React.Component{
       {this.props.canEdit ? <div onClick = {this.props.handleEdit} className = "edit-top-info-button">
         <FaEdit/>
       </div>:null}
-      <div className = "profile-picture-container offset-2">
+      <div className = "profile-picture-container">
         <img className = "profile-picture" alt = "profile" src = {this.props.profilePictureUrl}/>
       </div>
       <div className = "profile-header-info">

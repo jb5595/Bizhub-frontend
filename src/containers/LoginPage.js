@@ -23,7 +23,10 @@ class LoginPage extends React.Component{
          : null
        }
         <div className = "form-container">
-        <form onSubmit = {this.handleSubmit} className = "col-6 offset-3">
+        <br/><br/><br/><br/>
+        <form onSubmit = {this.handleSubmit} className = "col-4 offset-4 dashboard-container">
+          <br/><br/>
+
           <div className="form-group">
             <label htmlFor="user_name">Username</label>
             <input onChange = {this.handleChange} type="text" name = "user_name" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
@@ -33,6 +36,8 @@ class LoginPage extends React.Component{
             <input onChange = {this.handleChange} type="password" name = "password" className="form-control" placeholder="Password"/>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
+          <br/><br/>
+
         </form>
       </div>
     </div>

@@ -49,26 +49,26 @@ class SiteWideSearchResults extends React.Component {
   render(){
     return(
       <div>
-        <div>
+        <div className = "dashboard-container">
         <br/>
           <form className = "col-8 offset-2" onSubmit = {this.handleSubmit}>
                 <input onChange ={this.handleChange} value = {this.state.searchTerm} type="text" className="form-control" placeholder="Search by keyword or Tag"/>
           </form>
-        </div>
-        <br/>
-        <div className = "row">
-        <div className = "feed-top-bar row">
-          <div onClick = {this.displayQuestions} className = {this.state.displayOption === "Questions"? "top-bar-item active-menu-item" :"top-bar-item"}>
-            Questions
-          </div>
-          <div onClick = {this.displayExperts}  className = {this.state.displayOption === "Experts"? "top-bar-item active-menu-item" :"top-bar-item"}>
-            Experts
+          <br/>
+          <div className = "row">
+              <div className = "feed-top-bar row">
+                <div onClick = {this.displayQuestions} className = {this.state.displayOption === "Questions"? "top-bar-item active-menu-item" :"top-bar-item"}>
+                  Questions
+                </div>
+                <div onClick = {this.displayExperts}  className = {this.state.displayOption === "Experts"? "top-bar-item active-menu-item" :"top-bar-item"}>
+                  Experts
+                </div>
+              </div>
           </div>
         </div>
         <div className = "col-8 offset-2">
           {this.renderResults()}
        </div>
-        </div>
     </div>
     )
   }

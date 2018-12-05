@@ -104,11 +104,18 @@ class ExpertIndex extends React.Component{
   }
   render(){
     return(
+      <div>
+        <div className = "dashboard-container search-bar-additional-padding">
+          <ExpertIndexFilters handleFilterButtonClick = {this.handleFilterButtonClick}
+          handleSubmit = {this.filterSearchResults} handleChange = {this.handleFilterTextChange} filterText = {this.state.filterText}/>
+          <br/><br/>
+
+        </div>
       <div className = "col-8 offset-2">
-        <ExpertIndexFilters handleFilterButtonClick = {this.handleFilterButtonClick}
-        handleSubmit = {this.filterSearchResults} handleChange = {this.handleFilterTextChange} filterText = {this.state.filterText}/>
+
         {this.state.displayExperts.length !== 0 ? <ExpertPreviewContainer experts = {this.state.displayExperts}/> : <div><br/><br/>There Doesn't Appear to Be Anything Here. Try a different search term</div>}
       </div>
+    </div>
     )
   }
 }

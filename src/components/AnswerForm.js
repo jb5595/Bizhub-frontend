@@ -14,7 +14,7 @@ class AnswerForm extends React.Component{
   }
   render(){
     return(
-      <div  className ="answer-question-form">
+      <div  className ="answer-question-form ">
       <br/>
 
         <h5>Your Answer</h5>

@@ -37,8 +37,8 @@
   font-size:30px;
 }
 .banner-photo{
-  width: 100%;
-  height: 23vw;
+  width: 70%;
+  height: 21vw;
   min-height: 150px;
 }
 .profile-picture{
@@ -87,9 +87,11 @@
 .profile-info-menu{
   margin-top: 30px;
   margin-right: 15vw;
+  margin-bottom: 20px;
+  background-color: white;
   margin-left: 15vw;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+
 }
 .profile-section-header{
   margin-top: 20px;
@@ -187,7 +189,7 @@
   padding-left: 10px;
   padding-bottom: 36px;
   border-radius: 5px;
-  border-bottom: 1px solid black
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
 
 }
 .question-display{
@@ -202,7 +204,8 @@
   padding-bottom: 36px;
   padding-right: 20px;
   border-radius: 5px;
-  border-bottom: 1px solid black
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+
 }
 .question-display-content{
   margin-left: 20px;
@@ -422,8 +425,8 @@
   margin-top: 20px;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 2px 1px grey;
- border-bottom: 1px solid black;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+
 }
 .expertise-header{
   text-align: center;
@@ -533,7 +536,7 @@
 .top-tags-preview{
   margin-top: -20px;
   text-align: left;
-  margin-left: 120px;
+  margin-left: 147px;
 }
 .edit-expert-tags-button{
   width: 82%;
@@ -565,6 +568,12 @@
 }
 .answer-question-form{
   text-align: left;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: -29px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+  padding: 15px;
+  width: 106.5%;
 }
 
 .login-modal-content {
@@ -624,8 +633,10 @@
 
 .dashboard-info-menu{
   margin-top: 30px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  background-color: white;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 .suggested_questions{
   text-align: left;
@@ -639,7 +650,6 @@
 .profile_views{
   margin-top: 20px;
   border-radius: 10px;
-  background-color: white;
   padding: 10px;
 
 }
@@ -672,6 +682,42 @@
 }
 .decrease{
   color:red
+}
+.profile-picture-container{
+  margin-left: 25px;
+}
+.expert-profile-container{
+  background-color: white;
+  width: 70%;
+  margin-left: 15%;
+  padding-bottom: 25px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+  border-radius:  0px 0px 10px 10px;
+}
+.additional-container-padding{
+  padding: 20px 20px 0px 20px;
+}
+.dashboard-container{
+  background-color: white;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+  border-radius:  0px 0px 10px 10px;
+
+}
+.dashboard-top-info-container{
+  width: 85%;
+  margin-left: 7.5%;
+}
+.resume-item{
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #133e5b;
+}
+.search-bar-additional-padding{
+  padding-left: 190px;
+}
+.answer-container{
+  margin-left: -15px;
+  margin-right: -15px;
 }
 @keyframes App-logo-spin {
   from {

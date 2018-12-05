@@ -30,23 +30,24 @@ class Dashboard extends React.Component{
   render(){
     return(
       <div>
-        <div className = "col-10 offset-1 ">
-          <br/><br/>
-          {this.props.currentUser ? <DashboardTopInfo user={this.props.currentUser}/> :null}
-          <div className = "row dashboard-info-menu">
-              <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Overview" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
-                Overview
-              </div>
-              <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Suggested Questions" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
-                Suggested Questions
-              </div>
-              <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Your Answers" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
-              Your Answers
+      <div className = "dashboard-container dashboard-top-info-container">
 
-              </div>
-              <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Your Reviews" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
-                Your Reviews
-              </div>
+          <br/><br/>
+            {this.props.currentUser ? <DashboardTopInfo user={this.props.currentUser}/> :null}
+              <div className = "row dashboard-info-menu">
+                <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Overview" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
+                  Overview
+                </div>
+                <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Suggested Questions" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
+                  Suggested Questions
+                </div>
+                <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Your Answers" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
+                Your Answers
+
+                </div>
+                <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Your Reviews" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
+                  Your Reviews
+                </div>
           </div>
         </div>
         {this.props.currentUser ?this.renderSubInformation() :null}

@@ -69,9 +69,10 @@ class ExpertProfile extends React.Component{
                               modal = {this.state.modal}
                               educationToEdit = {this.state.educationToEdit}
                               /> : null}
+      <div className = "container-fluid">
+
         <img className = "banner-photo" alt = "banner" src = {this.props.expert.cover_photo_url}/>
-        <div className = "top-portion-container">
-          <div className = "container-fluid">
+          <div className = "expert-profile-container">
           <ProfileTopInfo handleEdit = {this.editTopInfo}
                           fullName ={this.props.expert.full_name}
                           averageRating = {this.props.expert.average_rating}
@@ -86,10 +87,13 @@ class ExpertProfile extends React.Component{
                        phone  = {this.props.expert.phone} email = {this.props.expert.email}
                        zipcode = {this.props.expert.zip_code} website  = {this.props.expert.website_url}/>
          </div>
+         <div className = "expert-profile-container">
+
         {this.props.expert ? <AccountAnalyticsOverview total_upvotes = {this.props.expert.total_upvotes}
                               topTags = {this.props.expert.top_tags}
                               answeredQuestions = {this.props.expert.answered_questions}/>: null}
         <ExpertiseInfo handleEdit = {this.editTags} canEdit = {this.state.canEdit} tags = {this.props.expert.tags}/>
+        </div>
         <div className = "row profile-info-menu">
             <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Reviews" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
               Reviews
@@ -102,7 +106,7 @@ class ExpertProfile extends React.Component{
             </div>
         </div>
         {this.renderSubInformation()}
-        <br/><br/>
+        <br/><br/> <br/>  <br/>
         </div>
       </div>
     )
@@ -111,12 +115,17 @@ class ExpertProfile extends React.Component{
   renderSubInformation(){
     switch (this.state.selectedSubPage) {
       case "Reviews":
-        return <div className = "col-8 offset-2 "><ExpertProfileReviews history = {this.props.history}
-        expert ={this.props.expert} expert_id = {this.props.expert.id}/> </div>
+        return  <div className = "expert-profile-container additional-container-padding">
+                  <ExpertProfileReviews history = {this.props.history}
+                  expert ={this.props.expert} expert_id = {this.props.expert.id}/>
+                 </div>
       case "Q&A":
-        return <ExpertProfileQA history = {this.props.history} questions = {this.props.expert.answered_questions}/>
+        return <div className = "expert-profile-container additional-container-padding">
+                <ExpertProfileQA history = {this.props.history} questions = {this.props.expert.answered_questions}/>
+              </div>
       default:
-        return <ExpertProfileAbout canEdit = {this.state.canEdit}
+        return           <div className = "expert-profile-container additional-container-padding">
+                                  <ExpertProfileAbout canEdit = {this.state.canEdit}
                                   editWorkExperience = {this.openEditWorkExperiencesModal}
                                   addWorkExperience = {this.openAddWorkExperienceModal}
                                   editEducation = {this.openEditEducationModal}
@@ -125,6 +134,7 @@ class ExpertProfile extends React.Component{
                                   workExperience = {this.props.expert.work_experiences}
                                   deleteEducation = {this.deleteEducation}
                                   deleteWorkExperience = {this.deleteWorkExperience}/>
+                                </div>
 
     }
   }
