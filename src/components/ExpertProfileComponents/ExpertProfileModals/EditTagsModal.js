@@ -1,6 +1,8 @@
 import React from "react"
 
-const TagURL = "http://localhost:3000/tags/match/"
+const TagURL = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/tags/match/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/tags/match/"
 
 class EditTagsModal extends React.Component{
   constructor(props){
@@ -27,7 +29,7 @@ class EditTagsModal extends React.Component{
             placeholder="e.g. (Social Media Marketing, Accounting)"/>
           </form>
           <div className = "tag-results-display-container">
-            {this.state.tagTerm !== "" ? this.state.tagSearchResults.slice(0,5).map(tag =>
+            {this.state.tagTerm !== ""  ? this.state.tagSearchResults.slice(0,5).map(tag =>
               <p key = {tag.id} id = {tag.id} onClick = {this.addTag}
                className = "tag-results-display">{tag.name}</p> ): null}
           </div>
@@ -77,9 +79,11 @@ removeTag = (e)=>{
     if (e.target.value !== "" && e.target.value !== " "){
       fetch(TagURL + e.target.value)
       .then(response => response.json())
-      .then(data => this.setState({
+      .then(data =>
+        this.setState({
         tagSearchResults: data
       }))
+
     }
 
   }

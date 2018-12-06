@@ -6,7 +6,9 @@ import EditUserInfoModal from "../components/UserProfileComponents/EditUserInfoM
 import * as actions from "../actions/userActions"
 import * as sessionActions from "../actions/CurrentUserActions"
 
-const UserUrl = "http://localhost:3000/users/"
+const UserUrl = process.env["NODE_ENV"] === "development" ?
+                                 "http://localhost:3000/users/"
+                                 :"https://pacific-mesa-20126.herokuapp.com/users"
 
 class UserProfile extends React.Component{
   constructor(props){

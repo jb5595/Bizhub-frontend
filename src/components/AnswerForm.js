@@ -1,6 +1,8 @@
 import React from 'react'
 
-const AnswerURl = "http://localhost:3000/answers/"
+const AnswerURl = process.env["NODE_ENV"] === "development" ?
+                                      "http://localhost:3000/answers/"
+                                     :"https://pacific-mesa-20126.herokuapp.com/answers/"
 
 class AnswerForm extends React.Component{
   constructor(props){

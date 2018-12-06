@@ -3,7 +3,9 @@ import TagForm from "../components/TagForm"
 import { connect } from "react-redux"
 
 
-const QuestionURL = "http://localhost:3000/questions/"
+const QuestionURL = process.env["NODE_ENV"] === "development" ?
+                                 "http://localhost:3000/questions/"
+                                 :"https://pacific-mesa-20126.herokuapp.com/questions"
 
 class PostQuestionPage extends React.Component{
   constructor(props){

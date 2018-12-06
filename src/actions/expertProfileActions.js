@@ -1,5 +1,7 @@
 
-const BASEEXPERTURL = "http://localhost:3000/experts/"
+const BASEEXPERTURL = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/experts/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/experts"
 
 export function loadProfile(expertID){
 

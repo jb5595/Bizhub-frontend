@@ -1,8 +1,14 @@
 import React from 'react'
 import QuestionDisplayContainer from "./QuestionDisplayContainer"
 import ExpertPreviewContainer from "./ExpertPreviewContainer"
-const QuestionsURL = "http://localhost:3000/questions"
-const ExpertsURL = "http://localhost:3000/experts"
+
+
+const QuestionsURL = process.env["NODE_ENV"] === "development" ?
+                                 "http://localhost:3000/questions/"
+                                 :"https://pacific-mesa-20126.herokuapp.com/questions"
+const ExpertsURL = process.env["NODE_ENV"] === "development" ?
+                                 "http://localhost:3000/experts/"
+                                 :"https://pacific-mesa-20126.herokuapp.com/experts"
 
 class SiteWideSearchResults extends React.Component {
   constructor(props){

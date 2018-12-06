@@ -1,8 +1,9 @@
 import React from "react"
 import { FaEdit } from "react-icons/fa";
 
-const WebsiteViewURl = "http://localhost:3000/experts/"
-
+const WebsiteViewURl = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/experts/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/experts"
 class ContactInfo extends React.Component{
   render(){
     return(

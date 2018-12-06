@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux"
 import * as actions from "../actions/CurrentUserActions"
-
+const UserUrl = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/users/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/users/"
 class CreateUserPage extends React.Component{
   constructor(){
     super()
@@ -87,7 +89,7 @@ class CreateUserPage extends React.Component{
   handleSubmit = (e) => {
     e.preventDefault()
     let body = {user: this.state.user}
-    fetch("http://localhost:3000/users/", {
+    fetch(UserUrl, {
       method: "POST",
       headers: {
           "Content-Type": "application/json",

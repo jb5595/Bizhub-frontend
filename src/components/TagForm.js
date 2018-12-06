@@ -1,5 +1,8 @@
 import React from "react"
-const TagURL = "http://localhost:3000/tags/match/"
+
+const TagURL = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/tags/match/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/tags/match/"
 class TagForm extends React.Component{
   constructor(){
     super()

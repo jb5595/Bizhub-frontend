@@ -1,6 +1,5 @@
 import React from "react"
 
-import { FaEdit } from "react-icons/fa";
 
 
 class EditContactInfoModal extends React.Component{

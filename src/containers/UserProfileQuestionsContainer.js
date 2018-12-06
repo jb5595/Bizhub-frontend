@@ -37,11 +37,11 @@ class UserProfileQuestionsContainer extends React.Component{
    noQuestionsRender(){
     if (this.props.currentUser.id === this.props.user.id && !this.props.currentUserIsExpert){
       return(
-        <div>No questions yet! <Link className = "homepage-link" to = 'http://localhost:3001/questions'>Browse questions</Link> other users have asked or <Link className = "homepage-link" to = "/post/question"> post your own </Link> </div>
+        <div>No questions yet! <Link className = "homepage-link" to = 'questions'>Browse questions</Link> other users have asked or <Link className = "homepage-link" to = "/post/question"> post your own </Link> </div>
       )
     }else{
       return(
-        <div>No questions yet! <Link className = "homepage-link" to = 'http://localhost:3001/questions'> Browse questions </Link> other users have asked</div>
+        <div>No questions yet! <Link className = "homepage-link" to = 'questions'> Browse questions </Link> other users have asked</div>
       )
     }
 

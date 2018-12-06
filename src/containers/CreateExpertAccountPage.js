@@ -2,7 +2,9 @@ import React from "react"
 import { connect } from "react-redux"
 import * as actions from "../actions/CurrentUserActions"
 
-const ExpertURL = "http://localhost:3000/experts/"
+const ExpertURL = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/experts/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/experts/"
 
 class CreateExpertAccountPage extends React.Component{
   constructor(props){
