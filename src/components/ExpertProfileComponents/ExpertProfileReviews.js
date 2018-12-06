@@ -5,29 +5,33 @@ import * as actions from "../../actions/expertProfileActions"
 import ReviewDisplay from "../ReviewDisplay"
 
 class ExpertProfileReviews extends React.Component{
-
+  // Loads Reviews upon mounting
   componentDidMount(){
     this.props.loadReviews(this.props.expert_id)
   }
   render(){
     return(
     <div className ="review-container">
-    <br/>
+      <br/>
       <div>
+      {/*If there is a non expert user logged in render review button */}
       {this.props.currentUser && !this.props.currentUserIsExpert ?
         <div>
-          <div><b>Review {this.props.expert.full_name}</b></div>
+          <div>
+            <b>Review {this.props.expert.full_name}</b>
+          </div>
             <StarRatingComponent name = "redirect"
              className = "rating-icon-form" starColor={"#258493"}
              onStarClick={this.redirectToPostReviewPage}/>
              <br/>
              <small>Have you worked with {this.props.expert.full_name}?  </small>
              <small className ="start-review"><b> Start Your Review</b></small>
-             <br/><br/> </div> : null}
-
+             <br/><br/>
+        </div>
+         : null}
        <h5>Reviews</h5>
        {this.props.reviews.map(review=><ReviewDisplay review={review} key = {review.id}/>)}
-     </div>
+       </div>
     </div>
   )
 }

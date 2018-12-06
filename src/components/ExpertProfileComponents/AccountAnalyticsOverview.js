@@ -11,6 +11,8 @@ class AccountAnalyticsOverview extends React.Component{
             Expert Answers:
           </div>
           <div className = "bizhub-overview-info">
+            {/* Ensures Answered Questions has loaded  to prevent calling
+               .length on undefined  */}
             {this.props.answeredQuestions ? this.props.answeredQuestions.length : null}
           </div>
         </div>
@@ -19,7 +21,10 @@ class AccountAnalyticsOverview extends React.Component{
             Top Tags:
           </div>
           <div className = "bizhub-overview-info">
-          {this.props.topTags ? this.props.topTags.map(tag => <div key = {tag.id}>{tag.name}</div>) : null}
+          {/* Ensures Tags have loaded to prevent calling
+             before rendering to prevent calling actions on undefined  */}
+          {this.props.topTags ?
+            this.props.topTags.map(tag => <div key = {tag.id}>{tag.name}</div>): null}
           </div>
         </div>
         <div className= "col-10 offset-md-0 offset-1 col-md-2 ">

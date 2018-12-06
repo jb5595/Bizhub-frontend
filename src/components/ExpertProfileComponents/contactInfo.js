@@ -7,6 +7,8 @@ class ContactInfo extends React.Component{
   render(){
     return(
       <React.Fragment>
+      {/* Renders edit button if user is looking at own profile, edit button
+        opens modal to edit profile on click  */}
       {this.props.canEdit ?<div onClick = {this.props.handleEdit} className = "edit-top-info-button">
         <FaEdit/>
       </div>:null}
@@ -17,6 +19,8 @@ class ContactInfo extends React.Component{
               Website
             </div>
             <div className = "contact-info">
+            {/* Links to external website, and logs website click when user
+              clicks link  */}
               <a onClick ={this.handleClick} href = {`http://${this.props.website}`}>{this.props.website}</a>
             </div>
             <div className = "contact-header">
@@ -54,6 +58,8 @@ class ContactInfo extends React.Component{
     )
   }
   handleClick = () =>{
+    /* Links to external website, and posts website click to backend when user
+      clicks link  */
       fetch(WebsiteViewURl + this.props.id  + "/website_clicks",{
         method: "POST",
         headers: {
@@ -66,7 +72,5 @@ class ContactInfo extends React.Component{
 
     }
   }
-
-
 
 export default ContactInfo

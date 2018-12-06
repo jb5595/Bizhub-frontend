@@ -7,7 +7,7 @@ class DashboardTopInfo extends React.Component{
       <div className = "dashboard-top-info">
       <div className = "row">
         <div className = "col-2">
-        <img className = "dashboard-profile-picture" alt = "profile" src = {this.props.user.profile_picture_url}/>
+          <img className = "dashboard-profile-picture" alt = "profile" src = {this.props.user.profile_picture_url}/>
         </div>
         <div className = "col-8">
           <h4>Welcome back {this.props.user.full_name}</h4>

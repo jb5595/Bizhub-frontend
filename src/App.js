@@ -24,15 +24,19 @@ const ProfileViewURl = "http://localhost:3000/experts/"
 class App extends Component {
 
   componentDidMount(){
+    // logs in user from local storage
     if (localStorage.getItem("userId")){
       let id = localStorage.getItem("userId")
       let jwt = localStorage.getItem("jwt")
       let userType = localStorage.getItem("userType")
-      userType === "Expert" ? this.props.loginExpertFromLocalStorage(id, jwt) :
+
+      userType === "Expert" ?
+      this.props.loginExpertFromLocalStorage(id, jwt) :
       this.props.loginUserFromLocalStorage(id, jwt)
     }
   }
   postProfileView(expertId){
+    // Posts Profile View when expert profile is visited
     fetch(ProfileViewURl + expertId  + "/profile_views",{
       method: "POST",
       headers: {
@@ -48,6 +52,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+        {/* Loads Navbar on top of every page */}
           <Route path = "/" render = {props => <NavBar {...props}/>}/>
           <Route path="/" exact render = {props => <HomePage {...props} />} />
           <Route path='/users/:id' render={(props)=> {
@@ -59,6 +64,7 @@ class App extends Component {
             />
           <Route path = "/experts/:id" render = {(props) =>{
             let expertId = props.match.params.id
+            /* Posts profile view whenever expert profile is visited */
             this.postProfileView(expertId)
             return <ExpertProfile {...props} id = {expertId}/>
           }}/>

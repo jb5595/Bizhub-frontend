@@ -4,6 +4,8 @@ import QuestionDisplayContainer from "../../containers/QuestionDisplayContainer"
 class YourAnswers extends React.Component{
   constructor(props){
     super(props)
+    // Prevents a divide by 0 error
+
     if(this.props.answers_overview.answers_last_month ===0){
       if(this.props.answers_overview.answers_this_month >0){
         this.state = {
@@ -16,6 +18,10 @@ class YourAnswers extends React.Component{
         }
       }
     }
+    /*
+      Calculates percentage difference for
+     PercentDif = (Amount this month - Amount Last Month)/(Amount Last Month)
+    */
     else{
       this.state = {
         answerPercentDifference: ((this.props.answers_overview.answers_this_month-this.props.answers_overview.answers_last_month)/this.props.answers_overview.answers_last_month).toFixed(2),
@@ -26,46 +32,46 @@ class YourAnswers extends React.Component{
 
   render(){
     return(
-      <div>
-        <div className = "analytics">
+      <div className = "analytics">
         <h4>Your Answers</h4>
-          <div className = "profile_views ">
-            <p>Get more profile views by answering questions.</p>
-            <br/>
-            <div className = "dashboard-container additional-container-padding">
-              <div className = "row offset-1">
-                <div className = "analytics-header">
-                  <div>
-                    <b>Total Answers</b>
-                  </div>
-                  <div>
-                    {this.props.answers_overview.total_answers}
-                  </div>
+        <div className = "profile_views ">
+          <p>Get more profile views by answering questions.</p>
+          <br/>
+          <div className = "dashboard-container additional-container-padding">
+            <div className = "row offset-1">
+              <div className = "analytics-header">
+                <div>
+                  <b>Total Answers</b>
                 </div>
-                <div className = "analytics-header">
-                  <div>
-                    <b>Answers This Month</b>
-                  </div>
-                  <div>
-                  {this.props.answers_overview.answers_this_month}
-                  </div>
-                  {this.state.answerPercentDifference > 0.0 ? <small className = "increase">+{this.state.answerPercentDifference}%</small> : <small className = "decrease">({this.state.answerPercentDifference}%)</small> }
-                </div>
-                <div className = "analytics-header">
-                  <div>
-                    <b>Answers Last Month</b>
-                  </div>
-                  <div>
-                  {this.props.answers_overview.answers_last_month}
-                  </div>
-                </div>
+                <div>
+                  {this.props.answers_overview.total_answers}
                 </div>
               </div>
-            <div className = "dashboard-question-preview">
-            <QuestionDisplayContainer history = {this.props.history} questions ={this.props.questions}/>
+              <div className = "analytics-header">
+                <div>
+                  <b>Answers This Month</b>
+                </div>
+                <div>
+                  {this.props.answers_overview.answers_this_month}
+                </div>
+              {/* Conditionaly Renders Positive Change in Green Text and negative in red */}
+              {this.state.answerPercentDifference > 0.0 ?
+                 <small className = "increase">+{this.state.answerPercentDifference}%</small> :
+                 <small className = "decrease">({this.state.answerPercentDifference}%)</small> }
+              </div>
+              <div className = "analytics-header">
+                <div>
+                  <b>Answers Last Month</b>
+                </div>
+                <div>
+                  {this.props.answers_overview.answers_last_month}
+                </div>
+              </div>
+              </div>
             </div>
+          <div className = "dashboard-question-preview">
+            <QuestionDisplayContainer history = {this.props.history} questions ={this.props.questions}/>
           </div>
-
         </div>
       </div>
     )

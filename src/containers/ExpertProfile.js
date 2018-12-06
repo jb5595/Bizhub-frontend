@@ -120,21 +120,21 @@ class ExpertProfile extends React.Component{
                   expert ={this.props.expert} expert_id = {this.props.expert.id}/>
                  </div>
       case "Q&A":
-        return <div className = "expert-profile-container additional-container-padding">
+        return <div className = "col-8 offset-2 additional-container-padding">
                 <ExpertProfileQA history = {this.props.history} questions = {this.props.expert.answered_questions}/>
               </div>
       default:
-        return           <div className = "expert-profile-container additional-container-padding">
-                                  <ExpertProfileAbout canEdit = {this.state.canEdit}
-                                  editWorkExperience = {this.openEditWorkExperiencesModal}
-                                  addWorkExperience = {this.openAddWorkExperienceModal}
-                                  editEducation = {this.openEditEducationModal}
-                                  addEducation = {this.openAddEducationExperienceModal}
-                                  educations = {this.props.expert.educations}
-                                  workExperience = {this.props.expert.work_experiences}
-                                  deleteEducation = {this.deleteEducation}
-                                  deleteWorkExperience = {this.deleteWorkExperience}/>
-                                </div>
+      return  <div className = "expert-profile-container additional-container-padding">
+                  <ExpertProfileAbout canEdit = {this.state.canEdit}
+                  editWorkExperience = {this.openEditWorkExperiencesModal}
+                  addWorkExperience = {this.openAddWorkExperienceModal}
+                  editEducation = {this.openEditEducationModal}
+                  addEducation = {this.openAddEducationExperienceModal}
+                  educations = {this.props.expert.educations}
+                  workExperience = {this.props.expert.work_experiences}
+                  deleteEducation = {this.deleteEducation}
+                  deleteWorkExperience = {this.deleteWorkExperience}/>
+              </div>
 
     }
   }
