@@ -1,8 +1,8 @@
 
 // const BASEQUESTIONSURL = process.env["NODE_ENV"] === "development" ?
                                   // "http://localhost:3000/questions/"
-                                  // :"https://pacific-mesa-20126.herokuapp.com/questions"
-const BASEQUESTIONSURL = "https://pacific-mesa-20126.herokuapp.com/questions"
+                                  // :"https://pacific-mesa-20126.herokuapp.com/questions/"
+const BASEQUESTIONSURL = "https://pacific-mesa-20126.herokuapp.com/questions/"
 export function loadQuestion(questionId){
 
   return (dispatch) => {

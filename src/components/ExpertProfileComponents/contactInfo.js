@@ -3,8 +3,8 @@ import { FaEdit } from "react-icons/fa";
 
 // const WebsiteViewURl = process.env["NODE_ENV"] === "development" ?
 //                                   "http://localhost:3000/experts/"
-//                                   :"https://pacific-mesa-20126.herokuapp.com/experts"
-const WebsiteViewURl = "https://pacific-mesa-20126.herokuapp.com/experts"
+//                                   :"https://pacific-mesa-20126.herokuapp.com/experts/"
+const WebsiteViewURl = "https://pacific-mesa-20126.herokuapp.com/experts/"
 class ContactInfo extends React.Component{
   render(){
     return(

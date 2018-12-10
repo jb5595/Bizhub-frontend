@@ -3,8 +3,8 @@ import { connect } from "react-redux"
 import * as actions from "../actions/CurrentUserActions"
 // const USER_AUTH = process.env["NODE_ENV"] === "development" ?
 //                                  "http://localhost:3000/user_auth/"
-//                                  :"https://pacific-mesa-20126.herokuapp.com/user_auth"
-const USER_AUTH = "https://pacific-mesa-20126.herokuapp.com/user_auth"
+//                                  :"https://pacific-mesa-20126.herokuapp.com/user_auth/"
+const USER_AUTH = "https://pacific-mesa-20126.herokuapp.com/user_auth/"
 class LoginPage extends React.Component{
   constructor(){
     super()

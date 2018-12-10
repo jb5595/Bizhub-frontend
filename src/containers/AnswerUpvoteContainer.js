@@ -2,11 +2,11 @@
 import React from "react"
 import {IoMdArrowDropdownCircle, IoMdArrowDropupCircle } from "react-icons/io"
 import { connect } from "react-redux"
-// 
+//
 // const UpvoteUrl = process.env["NODE_ENV"] === "development" ?
-//                                   "http://localhost:3000/answer_upvotes"
-//                                   :"https://pacific-mesa-20126.herokuapp.com/answer_upvotes"
-const UpvoteUrl ="https://pacific-mesa-20126.herokuapp.com/answer_upvotes"
+//                                   "http://localhost:3000/answer_upvotes/"
+//                                   :"https://pacific-mesa-20126.herokuapp.com/answer_upvotes/"
+const UpvoteUrl ="https://pacific-mesa-20126.herokuapp.com/answer_upvotes/"
 class AnswerUpvoteContainer extends React.Component {
   constructor(props){
     super(props)

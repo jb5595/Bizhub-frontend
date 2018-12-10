@@ -5,8 +5,8 @@ import { connect } from "react-redux"
 
 // const QuestionURL = process.env["NODE_ENV"] === "development" ?
 //                                  "http://localhost:3000/questions/"
-//                                  :"https://pacific-mesa-20126.herokuapp.com/questions"
-const QuestionURL = "https://pacific-mesa-20126.herokuapp.com/questions"
+//                                  :"https://pacific-mesa-20126.herokuapp.com/questions/"
+const QuestionURL = "https://pacific-mesa-20126.herokuapp.com/questions/"
 class PostQuestionPage extends React.Component{
   constructor(props){
     super(props)

@@ -5,12 +5,12 @@ import ExpertPreviewContainer from "./ExpertPreviewContainer"
 
 // const QuestionsURL = process.env["NODE_ENV"] === "development" ?
                                  // "http://localhost:3000/questions/"
-                                 // :"https://pacific-mesa-20126.herokuapp.com/questions"
+                                 // :"https://pacific-mesa-20126.herokuapp.com/questions/"
 // const ExpertsURL = process.env["NODE_ENV"] === "development" ?
 //                                  "http://localhost:3000/experts/"
-//                                  :"https://pacific-mesa-20126.herokuapp.com/experts"
-const QuestionsURL ="https://pacific-mesa-20126.herokuapp.com/questions"
-const ExpertsURL = "https://pacific-mesa-20126.herokuapp.com/experts"
+//                                  :"https://pacific-mesa-20126.herokuapp.com/experts/"
+const QuestionsURL ="https://pacific-mesa-20126.herokuapp.com/questions/"
+const ExpertsURL = "https://pacific-mesa-20126.herokuapp.com/experts/"
 
 class SiteWideSearchResults extends React.Component {
   constructor(props){

@@ -8,8 +8,8 @@ import * as sessionActions from "../actions/CurrentUserActions"
 
 // const UserUrl = process.env["NODE_ENV"] === "development" ?
 //                                  "http://localhost:3000/users/"
-//                                  :"https://pacific-mesa-20126.herokuapp.com/users"
-const UserUrl ="https://pacific-mesa-20126.herokuapp.com/users"
+//                                  :"https://pacific-mesa-20126.herokuapp.com/users/"
+const UserUrl ="https://pacific-mesa-20126.herokuapp.com/users/"
 class UserProfile extends React.Component{
   constructor(props){
     super(props)
