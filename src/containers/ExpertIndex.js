@@ -2,9 +2,10 @@
 import React from "react"
 import ExpertPreviewContainer from "./ExpertPreviewContainer"
 import ExpertIndexFilters from "../components/ExpertIndexFilters"
-const ExpertsURL =  process.env["NODE_ENV"] === "development" ?
-                                  "http://localhost:3000/experts/"
-                                  :"https://pacific-mesa-20126.herokuapp.com/experts"
+// const ExpertsURL =  process.env["NODE_ENV"] === "development" ?
+//                                   "http://localhost:3000/experts/"
+//                                   :"https://pacific-mesa-20126.herokuapp.com/experts"
+const ExpertsURL ="https://pacific-mesa-20126.herokuapp.com/experts"
 class ExpertIndex extends React.Component{
 
   constructor(props){
