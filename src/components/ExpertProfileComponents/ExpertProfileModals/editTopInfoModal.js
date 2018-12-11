@@ -28,13 +28,29 @@ class EditTopInfoModal extends React.Component{
         </div>
         <div className="modal-body">
         <form onSubmit = {this.handleSubmit}>
-          <img className = "edit-banner-photo-preview" alt = "banner" src = {this.state.cover_photo_preview ? this.state.cover_photo_preview
+        {/* displays preview of new photo if user has uploaded one */}
+
+          <img className = "edit-banner-photo-preview" alt = "banner"
+                src = {this.state.cover_photo_preview ? this.state.cover_photo_preview
                :this.props.cover_photo_url}/>
-          <div className = "edit-cover-photo-button"> <FaEdit onClick = {() => this.coverInput.click()}/> </div>
+         {/* Edit icon activates file input when clicked  */}
+
+          <div className = "edit-cover-photo-button">
+            <FaEdit onClick = {() => this.coverInput.click()}/>
+          </div>
+          {/* displays preview of new photo if user has uploaded one */}
+
           <img className = "profile-picture-edit-preview" alt = "profile"
           src = {this.state.profile_picture_preview ? this.state.profile_picture_preview
              :this.props.profile_picture_url}/>
-          <div className = "edit-profile-photo-button"> <FaEdit onClick = {() => this.profileInput.click()}/> </div>
+             {/* Edit icon activates file input when clicked  */}
+          <div className = "edit-profile-photo-button">
+            <FaEdit onClick = {() => this.profileInput.click()}/>
+          </div>
+
+          {/* File inputs are hidden and a reference is created so they can be
+             activated by edit icons  */}
+
           <input type = 'file' ref ={profileInput => this.profileInput = profileInput}
           onChange = {this.handleProfilePictureSelect} style = {{display: "none"}}/>
           <input type = 'file' ref ={coverInput => this.coverInput = coverInput}
@@ -70,7 +86,11 @@ class EditTopInfoModal extends React.Component{
     )
   }
 handleCoverPhotoSelect = (e) =>{
+  /* Checks to make sure file is attached*/
+
   if (e.target.files[0]){
+    /* Creates url to display preview of new profile picture*/
+
   this.setState({
     expert:{
       ...this.state.expert,
@@ -83,7 +103,11 @@ handleCoverPhotoSelect = (e) =>{
 
 
   handleProfilePictureSelect = (e) =>{
+    /* Checks to make sure file is attached*/
+
     if (e.target.files[0]){
+      /* Creates url to display preview of new profile picture*/
+
     this.setState({
       expert:{
         ...this.state.expert,

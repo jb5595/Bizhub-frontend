@@ -11,9 +11,15 @@ class NavBarPreloginButtons extends React.Component {
   render(){
     return(
       <React.Fragment>
-        <Link to = "/create_user"><button className = "navbar-button">Create User</button></Link>
-        <span onClick = {this.openLoginModal} className = "sign-in-button">Sign In</span>
-        {this.state.openModal ? <LoginModal handleClose = {this.closeModal}/> : null}
+        <Link to = "/create_user">
+          <button className = "navbar-button">Create User</button>
+        </Link>
+        <span onClick = {this.openLoginModal} className = "sign-in-button">
+          Sign In
+        </span>
+        {this.state.openModal ?
+           <LoginModal handleClose = {this.closeModal}/>
+           : null}
       </React.Fragment>
     )
   }

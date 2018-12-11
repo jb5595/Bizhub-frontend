@@ -34,9 +34,12 @@ class AnswerDisplay extends React.Component{
         <div className = "row">
           <div className = "answer-display-content">
             <p>{this.props.content}</p>
-            {this.state.upvotes && this.props.currentUser ? <AnswerUpvoteContainer
-            answerId= {this.props.answerId} questionId = {this.props.questionId}
-            upvotes = {this.state.upvotes} reloadUpvotes = {this.loadUpvotes} upvoteScore = {this.state.upvoteScore}/> : null}
+            {this.state.upvotes && this.props.currentUser ?
+               <AnswerUpvoteContainer
+                  answerId= {this.props.answerId} questionId = {this.props.questionId}
+                  upvotes = {this.state.upvotes} reloadUpvotes = {this.loadUpvotes}
+                  upvoteScore = {this.state.upvoteScore}/>
+              : null}
             <div className = "offset-0 offset-lg-6 row">
               <div className ="col-1 col-lg-2">
                 <img className = "profile-picture-thumbnail" alt = "profile" src = {this.props.expert.profile_picture_url}/>

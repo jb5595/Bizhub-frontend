@@ -22,9 +22,11 @@ class UserProfileTopInfo extends React.Component{
     return(
       <div className = "user-profile-top-info-container offset-2 col-8">
       <div className = "row">
-      {this.state.canEdit ? <div onClick = {this.props.handleModal} className = "edit-top-info-button">
+      {this.state.canEdit ?
+         <div onClick = {this.props.handleModal} className = "edit-top-info-button">
         <FaEdit/>
-      </div>:null}
+        </div>
+        :null}
         <div className = "user-profile-picture-container ">
           <img className = "user-profile-picture" alt = "profile" src = "https://via.placeholder.com/150/0000FF/808080 ?Text=Digital.com"/>
         </div>
@@ -55,10 +57,7 @@ class UserProfileTopInfo extends React.Component{
             </div>
           </div>
         </div>
-
       </div>
-
-
       </div>
     )
   }

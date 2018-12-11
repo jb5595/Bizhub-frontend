@@ -36,12 +36,16 @@ class EditTagsModal extends React.Component{
           <br/>
           <label htmlFor="tag"><b>Your Expertise</b></label>
           <div className = "selected-tags">
+          {/* Adds tag to Selected Tag section, adds button to remove tag */}
           {this.state.tags.map((tag, idx) =>
             <div key = {idx} className = "expertise-tag">{tag.name}
             <span data-name = {tag.name} className = "remove-tag" onClick = {this.removeTag}> X  </span> </div>)}
           </div>
           <br/>
-            <button onClick = {this.submitEdits} className = "btn btn-primary">Save Changes</button>
+          {/* submit form button */}
+            <button onClick = {this.submitEdits} className = "btn btn-primary">
+              Save Changes
+            </button>
           <br/><br/>
 
         </div>

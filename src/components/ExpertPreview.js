@@ -22,7 +22,9 @@ class ExpertPreview extends React.Component{
           </div>
           <div className = "row">
             <div className = "profile-name" >
-              <Link to ={`/experts/${this.props.expert.id}`}><h4>{this.props.expert.full_name}</h4></Link>
+              <Link to ={`/experts/${this.props.expert.id}`}>
+                <h4>{this.props.expert.full_name}</h4>
+              </Link>
             </div>
           </div>
           <div className = "row">
@@ -35,8 +37,11 @@ class ExpertPreview extends React.Component{
       <div className = "row">
         <div className = "top-tags-preview">
         {this.props.expert.top_tags.length !== 0 ? <div>Top Tags</div> : null}
-        {this.props.expert.top_tags ? this.props.expert.top_tags.map(tag =>
-          <div className = "expertise-tag" key = {tag.id}>{tag.name}</div>) : null}
+        {this.props.expert.top_tags ?
+          this.props.expert.top_tags.map(tag =>
+          <div className = "expertise-tag" key = {tag.id}>{tag.name}</div>
+          )
+          : null}
         </div>
       </div>
       <div className = "row center-text">

@@ -15,12 +15,17 @@ class NavBar extends React.Component{
       <React.Fragment>
         <nav className="navbar navbar-light bg-light">
           <div className="navbar-nav">
-          <Link to = "/"> <IoIosContacts className = "navbar-icon"/> BizHub <span className="sr-only">(current)</span></Link>
+          <Link to = "/">
+            <IoIosContacts className = "navbar-icon"/>
+              BizHub
+          </Link>
           </div>
           <NavbarSearch history = {this.props.history}/>
 
           <div>
-            {this.props.currentUser ?<NavBarPostloginButtons history = {this.props.history}/>:<NavBarPreloginButtons/>}
+            {this.props.currentUser ?
+              <NavBarPostloginButtons history = {this.props.history}/>
+              :<NavBarPreloginButtons/>}
           </div>
         </nav>
         <nav className="navbar sub-nav navbar-dark bg-dark">

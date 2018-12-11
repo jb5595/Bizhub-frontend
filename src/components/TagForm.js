@@ -23,9 +23,11 @@ class TagForm extends React.Component{
           placeholder="e.g. (Social Media Marketing, Accounting)"/>
         </form>
         <div className = "tag-results-display-container">
-          {this.state.tagTerm !== "" ? this.state.tagSearchResults.map(tag =>
-            <p key = {tag.id} id = {tag.id} onClick = {this.addTag}
-             className = "tag-results-display">{tag.name}</p> ): null}
+          {this.state.tagTerm !== "" ?
+            this.state.tagSearchResults.map(tag =>
+              <p key = {tag.id} id = {tag.id} onClick = {this.addTag}
+             className = "tag-results-display">{tag.name}</p> )
+           : null}
         </div>
         <br/>
         <label><b>Selected Tags</b></label>

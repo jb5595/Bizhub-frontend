@@ -7,6 +7,7 @@ import AnswersPreview from "../components/DashBoardComponents/AnswersPreview"
 import SuggestedQuestionsPreview from "../components/DashBoardComponents/SuggestedQuestionsPreview"
 import YourAnswers from "../components/DashBoardComponents/YourAnswers"
 import Reviews from "../components/DashBoardComponents/Reviews"
+
 // const MatchingQuestionsURL = process.env["NODE_ENV"] === "development" ?
 //                                   "http://localhost:3000/experts/suggested_questions/"
 //                                   :"https://pacific-mesa-20126.herokuapp.com/experts/suggested_questions/"
@@ -40,16 +41,24 @@ class Dashboard extends React.Component{
           <br/><br/>
             {this.props.currentUser ? <DashboardTopInfo user={this.props.currentUser}/> :null}
               <div className = "row dashboard-info-menu">
+              {/* Displays Active menu items with underline */}
+
                 <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Overview" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
                   Overview
                 </div>
+                {/* Displays Active menu items with underline */}
+
                 <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Suggested Questions" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
                   Suggested Questions
                 </div>
+                {/* Dispalys Active menu items with underline */}
+
                 <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Your Answers" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
                 Your Answers
 
                 </div>
+                {/* Dispalys Active menu items with underline */}
+
                 <div onClick = {this.menuSelector} className = {this.state.selectedSubPage === "Your Reviews" ? "profile-menu-option active-menu-option":"profile-menu-option"}>
                   Your Reviews
                 </div>

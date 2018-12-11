@@ -49,8 +49,12 @@ class NavBarSearch extends React.Component{
         value = {this.state.searchTerm} className="form-control"
          type="search" placeholder="Search BizHub..." />
         <div className = "navbar-search-results-preview-container">
-          {this.state.qaResults && this.state.qaResults.length !== 0 ?  this.renderQaResults() : null}
-          {this.state.expertResults && this.state.expertResults.length !== 0 ? this.renderExpertResults() : null }
+          {this.state.qaResults && this.state.qaResults.length !== 0 ?
+              this.renderQaResults()
+              : null}
+          {this.state.expertResults && this.state.expertResults.length !== 0 ?
+             this.renderExpertResults()
+             : null }
         </div>
       </form>
     </div>

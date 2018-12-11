@@ -12,10 +12,24 @@ class QuestionPreview extends React.Component{
       </h5>
       <p>{this.props.details.slice(0,140)}...</p>
       <div>
-      {this.props.user ? <div><small><FaArrowAltCircleUp/> {this.props.upvote_score}  </small>
-      <small className ="username-preview" onClick = {this.reRoutetoUserPage}><FaUserAlt/>   {this.props.user.user_name}</small> <small><FaIndustry/>   {this.props.user.industry}</small> </div> :null}
+        {this.props.user ?
+          <div>
+            <small>
+              <FaArrowAltCircleUp/> {this.props.upvote_score}
+           </small>
+           <small className ="username-preview" onClick = {this.reRoutetoUserPage}>
+            <FaUserAlt/>   {this.props.user.user_name}
+           </small>
+           <small>
+            <FaIndustry/>   {this.props.user.industry}
+           </small>
+       </div>
+     :null}
       </div>
-      {this.props.tags? this.props.tags.map(tag =><div key = {tag.id} className = "expertise-tag">{tag.name}</div>) : null}
+      {this.props.tags?
+        this.props.tags.map(tag =>
+          <div key = {tag.id} className = "expertise-tag">{tag.name}</div>)
+        : null}
     </div>
     )
   }

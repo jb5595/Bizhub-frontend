@@ -7,8 +7,17 @@ class NavBarPostloginButtons extends React.Component {
   render(){
     return(
       <React.Fragment>
-      {this.props.isExpert ? <Link to = {`/dashboard/${this.props.currentUser.id}`}><button className = "navbar-button">Dashboard</button></Link> :
-        <Link to = "/post/question"><button className = "navbar-button">Post a Question</button></Link>}
+      {/* Displays dashboard button for experts, and post a question button
+        for users  */}
+
+      {this.props.isExpert ?
+        <Link to = {`/dashboard/${this.props.currentUser.id}`}>
+        <button className = "navbar-button">Dashboard</button></Link>
+        :<Link to = "/post/question">
+          <button className = "navbar-button">
+            Post a Question
+          </button>
+        </Link>}
         <div className= "navbar-button" onClick = {this.goToProfile} >My Profile</div>
         <div className= "navbar-button" onClick = {this.logOut} >Log Out </div>
       </React.Fragment>
