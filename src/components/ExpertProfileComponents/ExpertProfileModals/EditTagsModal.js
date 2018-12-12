@@ -1,9 +1,9 @@
 import React from "react"
 
-// const TagURL = process.env["NODE_ENV"] === "development" ?
-//                                   "http://localhost:3000/tags/match/"
-//                                   :"https://pacific-mesa-20126.herokuapp.com/tags/match/"
-const TagURL = "https://pacific-mesa-20126.herokuapp.com/tags/match/"
+const TagURL = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/tags/match/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/tags/match/"
+// const TagURL = "https://pacific-mesa-20126.herokuapp.com/tags/match/"
 class EditTagsModal extends React.Component{
   constructor(props){
     super(props)

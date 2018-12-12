@@ -19,10 +19,9 @@ import * as actions from "./actions/CurrentUserActions"
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
-// const ProfileViewURl = process.env["NODE_ENV"] === "development" ?
-//                                  "http://localhost:3000/experts/"
-//                                  :"https://pacific-mesa-20126.herokuapp.com/experts"
-const ProfileViewURl = "https://pacific-mesa-20126.herokuapp.com/experts/"
+const ProfileViewURl = process.env["NODE_ENV"] === "development" ?
+                                 "http://localhost:3000/experts/"
+                                 :"https://pacific-mesa-20126.herokuapp.com/experts"
 class App extends Component {
 
   componentDidMount(){

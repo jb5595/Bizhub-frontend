@@ -2,10 +2,9 @@ import React from "react"
 import QuestionIndexFilters from "../components/QuestionIndexFilters"
 import QuestionDisplayContainer from './QuestionDisplayContainer'
 import { Link } from "react-router-dom"
-// const QuestionsURL = process.env["NODE_ENV"] === "development" ?
-//                                  "http://localhost:3000/questions/"
-//                                  :"https://pacific-mesa-20126.herokuapp.com/questions/"
-const QuestionsURL = "https://pacific-mesa-20126.herokuapp.com/questions/"
+const QuestionsURL = process.env["NODE_ENV"] === "development" ?
+                                 "http://localhost:3000/questions/"
+                                 :"https://pacific-mesa-20126.herokuapp.com/questions/"
 
 class QuestionIndexPage extends React.Component{
   constructor(props){

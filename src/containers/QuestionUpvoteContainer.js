@@ -5,11 +5,10 @@ import * as actions from "../actions/questionShowPageActions"
 import { connect } from "react-redux"
 
 
-// const UpvoteUrl = process.env["NODE_ENV"] === "development" ?
-//                                  "http://localhost:3000/question_upvotes/"
-//                                  :"https://pacific-mesa-20126.herokuapp.com/question_upvotes/"
+const UpvoteUrl = process.env["NODE_ENV"] === "development" ?
+                                 "http://localhost:3000/question_upvotes/"
+                                 :"https://pacific-mesa-20126.herokuapp.com/question_upvotes/"
 
-const UpvoteUrl = "https://pacific-mesa-20126.herokuapp.com/question_upvotes/"
 
 class QuestionUpvoteContainer extends React.Component {
   constructor(props){

@@ -3,14 +3,12 @@ import React from "react"
 import { MdQuestionAnswer } from "react-icons/md";
 
 
-// const QuestionsSearchPreviewURL = process.env["NODE_ENV"] === "development" ?
-//                                    "http://localhost:3000/questions/searchPreview/"
-//                                   :"https://pacific-mesa-20126.herokuapp.com/questions/searchPreview/"
-// const ExpertsSearchPreviewURL = process.env["NODE_ENV"] === "development" ?
-//                                    "http://localhost:3000/experts/searchPreview/"
-//                                   :"https://pacific-mesa-20126.herokuapp.com/experts/searchPreview/"
-const QuestionsSearchPreviewURL = "https://pacific-mesa-20126.herokuapp.com/questions/searchPreview/"
-const ExpertsSearchPreviewURL = "https://pacific-mesa-20126.herokuapp.com/experts/searchPreview/"
+const QuestionsSearchPreviewURL = process.env["NODE_ENV"] === "development" ?
+                                   "http://localhost:3000/questions/searchPreview/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/questions/searchPreview/"
+const ExpertsSearchPreviewURL = process.env["NODE_ENV"] === "development" ?
+                                   "http://localhost:3000/experts/searchPreview/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/experts/searchPreview/"
 class NavBarSearch extends React.Component{
   constructor(props){
     super(props)

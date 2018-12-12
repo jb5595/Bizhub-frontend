@@ -1,11 +1,10 @@
-const BASEEXPERTURL = "https://pacific-mesa-20126.herokuapp.com/experts/"
-// const BASEEXPERTURL = process.env["NODE_ENV"] === "development" ?
-//                                   "http://localhost:3000/experts/"
-//                                   :"https://pacific-mesa-20126.herokuapp.com/experts"
-// const BaseUserURl = process.env["NODE_ENV"] === "development" ?
-//                                   "http://localhost:3000/users/"
-//                                   :"https://pacific-mesa-20126.herokuapp.com/users"
-const BaseUserURl = "https://pacific-mesa-20126.herokuapp.com/users/"
+const BASEEXPERTURL = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/experts/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/experts"
+const BaseUserURl = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/users/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/users"
+
 export function SetCurrentUser(currentUser, jwt){
 
   return (dispatch) => {

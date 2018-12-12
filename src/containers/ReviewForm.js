@@ -2,10 +2,9 @@ import React from "react"
 import { connect } from "react-redux"
 import StarRatingComponent from 'react-star-rating-component';
 
-// const ReviewUrl = process.env["NODE_ENV"] === "development" ?
-//                                  "http://localhost:3000/reviews/"
-//                                  :"https://pacific-mesa-20126.herokuapp.com/reviews/"
-const ReviewUrl = "https://pacific-mesa-20126.herokuapp.com/reviews/"
+const ReviewUrl = process.env["NODE_ENV"] === "development" ?
+                                 "http://localhost:3000/reviews/"
+                                 :"https://pacific-mesa-20126.herokuapp.com/reviews/"
 class ReviewForm extends React.Component{
   constructor(props){
     super(props)

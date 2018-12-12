@@ -8,15 +8,14 @@ import SuggestedQuestionsPreview from "../components/DashBoardComponents/Suggest
 import YourAnswers from "../components/DashBoardComponents/YourAnswers"
 import Reviews from "../components/DashBoardComponents/Reviews"
 
-// const MatchingQuestionsURL = process.env["NODE_ENV"] === "development" ?
-//                                   "http://localhost:3000/experts/suggested_questions/"
-//                                   :"https://pacific-mesa-20126.herokuapp.com/experts/suggested_questions/"
-// const BaseAnalyticsURl = process.env["NODE_ENV"] === "development" ?
-//                                   "http://localhost:3000/experts/analytics/"
-//                                   :"https://pacific-mesa-20126.herokuapp.com/experts/analytics/"
+const MatchingQuestionsURL = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/experts/suggested_questions/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/experts/suggested_questions/"
+const BaseAnalyticsURl = process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/experts/analytics/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/experts/analytics/"
 
-const MatchingQuestionsURL = "https://pacific-mesa-20126.herokuapp.com/experts/suggested_questions/"
-const BaseAnalyticsURl ="https://pacific-mesa-20126.herokuapp.com/experts/analytics/"
+
 class Dashboard extends React.Component{
   constructor(props){
     super(props)

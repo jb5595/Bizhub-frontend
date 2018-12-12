@@ -10,11 +10,10 @@ import * as actions from "../actions/expertProfileActions"
 import * as sessionActions from "../actions/CurrentUserActions"
 import { connect } from "react-redux"
 
-// const BaseExpertURL =  process.env["NODE_ENV"] === "development" ?
-//                                   "http://localhost:3000/experts/"
-//                                   :"https://pacific-mesa-20126.herokuapp.com/experts/"
+const BaseExpertURL =  process.env["NODE_ENV"] === "development" ?
+                                  "http://localhost:3000/experts/"
+                                  :"https://pacific-mesa-20126.herokuapp.com/experts/"
 
-const BaseExpertURL ="https://pacific-mesa-20126.herokuapp.com/experts/"
 
 class ExpertProfileModalContainer extends React.Component{
   render(){
